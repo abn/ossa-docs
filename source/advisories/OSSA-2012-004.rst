@@ -1,0 +1,42 @@
+=============
+OSSA-2012-004
+=============
+
+XSS vulnerability in Horizon log viewer
+---------------------------------------
+:Date: April 17, 2012
+
+:Description:
+
+   Matthias Weckbecker reported a vulnerability in Horizon. He noted that
+   the log viewer refreshing mechanism does not escape the data fetched
+   from guest consoles. This means that HTML with Javascript code gets
+   interpreted as such, resulting in the ability to inject code into a
+   dashboard session.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg10211.html <https://lists.launchpad.net/openstack/msg10211.html>`_
+
+:Products affected: 
+   - horizon: TODO
+
+
+
+:Credits: - Matthias Weckbecker from UNKNOWN
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/977944 <https://launchpad.net/bugs/977944>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/6618 <https://review.openstack.org/#/c/6618>`_
+   - `https://review.openstack.org/#/c/6621 <https://review.openstack.org/#/c/6621>`_
+
+
+

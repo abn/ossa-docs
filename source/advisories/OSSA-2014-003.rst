@@ -1,0 +1,43 @@
+=============
+OSSA-2014-003
+=============
+
+Live migration can leak root disk into ephemeral storage
+--------------------------------------------------------
+:Date: January 23, 2014
+
+:Description:
+
+   Loganathan Parthipan from Hewlett Packard reported a vulnerability in
+   the Nova libvirt driver. By spawning a server with the same flavor as
+   another user's migrated virtual machine, an authenticated user can
+   potentially access that user's snapshot content resulting in information
+   leakage. Only setups using KVM live block migration are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-January/000188.html <http://lists.openstack.org/pipermail/openstack-announce/2014-January/000188.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Loganathan Parthipan from HP
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1251590 <https://launchpad.net/bugs/1251590>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/68658 <https://review.openstack.org/#/c/68658>`_
+   - `https://review.openstack.org/#/c/68659 <https://review.openstack.org/#/c/68659>`_
+   - `https://review.openstack.org/#/c/68660 <https://review.openstack.org/#/c/68660>`_
+
+
+

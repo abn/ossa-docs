@@ -1,0 +1,45 @@
+=============
+OSSA-2012-018
+=============
+
+EC2-style credentials invalidation issue
+----------------------------------------
+:Date: November 28, 2012
+
+:Description:
+
+   Vijaya Erukala reported a vulnerability in Keystone EC2-style
+   credentials invalidation: when a user is removed from a tenant, issued
+   EC2-style credentials would continue to be valid for that tenant. An
+   authenticated and authorized user could potentially leverage this
+   vulnerability to extend his access beyond the account owner
+   expectations. Only setups enabling EC2-style credentials (for example
+   enabling EC2 API in Nova) are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2012-November/000055.html <http://lists.openstack.org/pipermail/openstack-announce/2012-November/000055.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Vijaya Erukala from UNKNOWN
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1064914 <https://launchpad.net/bugs/1064914>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/16028 <https://review.openstack.org/#/c/16028>`_
+   - `https://review.openstack.org/#/c/16304 <https://review.openstack.org/#/c/16304>`_
+   - `https://review.openstack.org/#/c/16760 <https://review.openstack.org/#/c/16760>`_
+
+
+

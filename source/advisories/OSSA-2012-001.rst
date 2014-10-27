@@ -1,0 +1,48 @@
+=============
+OSSA-2012-001
+=============
+
+Tenant bypass by authenticated users using OpenStack API
+--------------------------------------------------------
+:Date: January 11, 2012
+
+:Description:
+
+   Nachi Ueno (NTT PF lab), Rohit Karajgi (Vertex) and Venkatesan Ravikumar
+   (HP) discovered a vulnerability in Nova API nodes handling of incoming
+   requests. An authenticated user may craft malicious commands to affect
+   resources on tenants he is not a member of, potentially leading to
+   incorrect billing, quota escaping or compromise of computing resources
+   created by a third-party. Only setups allowing the OpenStack API are
+   affected.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg06648.html <https://lists.launchpad.net/openstack/msg06648.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits:
+
+   - Nachi Ueno from NTT PF lab
+   - Rohit Karajgi from Vertex
+   - Venkatesan Ravikumar from HP
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/904072 <https://launchpad.net/bugs/904072>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/2960 <https://review.openstack.org/#/c/2960>`_
+   - `https://review.openstack.org/#/c/2961 <https://review.openstack.org/#/c/2961>`_
+
+
+

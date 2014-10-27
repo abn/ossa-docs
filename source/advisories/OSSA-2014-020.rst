@@ -1,0 +1,42 @@
+=============
+OSSA-2014-020
+=============
+
+XSS in Swift requests through WWW-Authenticate header
+-----------------------------------------------------
+:Date: June 19, 2014
+
+:Description:
+
+   Globo.com Security Team reported a vulnerability in Swift's header value
+   escaping. By tricking a Swift user into clicking a malicious URL, a
+   remote attacker may inject data in Swift response while still appearing
+   to come from the Swift server, potentially leading to other client-side
+   vulnerabilities. All Swift setups are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-June/000243.html <http://lists.openstack.org/pipermail/openstack-announce/2014-June/000243.html>`_
+
+:Products affected: 
+   - swift: TODO
+
+
+
+:Credits: - Globo.com Security Team from Globo.com
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1327414 <https://launchpad.net/bugs/1327414>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/101031 <https://review.openstack.org/#/c/101031>`_
+   - `https://review.openstack.org/#/c/101032 <https://review.openstack.org/#/c/101032>`_
+
+
+

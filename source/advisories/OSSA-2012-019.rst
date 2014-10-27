@@ -1,0 +1,44 @@
+=============
+OSSA-2012-019
+=============
+
+Extension of token validity through token chaining
+--------------------------------------------------
+:Date: November 28, 2012
+
+:Description:
+
+   Anndy reported a vulnerability in token chaining in Keystone. A token
+   expiration date can be circumvented by creating a new token before the
+   old one has expired. An authenticated and authorized user could
+   potentially leverage this vulnerability to extend his access beyond the
+   account owner expectations. Note: this vulnerability was fixed in the
+   past (CVE-2012-3426) but was reintroduced in Folsom when code was
+   refactored to support PKI tokens.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2012-November/000056.html <http://lists.openstack.org/pipermail/openstack-announce/2012-November/000056.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Anndy from UNKNOWN
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1079216 <https://launchpad.net/bugs/1079216>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/17050 <https://review.openstack.org/#/c/17050>`_
+   - `https://review.openstack.org/#/c/17051 <https://review.openstack.org/#/c/17051>`_
+
+
+

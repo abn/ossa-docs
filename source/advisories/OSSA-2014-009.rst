@@ -1,0 +1,46 @@
+=============
+OSSA-2014-009
+=============
+
+Nova host data leak to vm instance in rescue mode
+-------------------------------------------------
+:Date: March 27, 2014
+
+:Description:
+
+   Stanislaw Pitucha from Hewlett Packard reported a vulnerability in the
+   Nova instance rescue mode. By overwriting the disk inside an instance
+   with a malicious image and switching the instance to rescue mode, an
+   authenticated user would be able to leak an arbitrary file from the
+   compute host to the virtual instance. Note that the host file must be
+   readable by the libvirt/kvm context to be exposed. Only setups using
+   libvirt to spawn instance, and having "use_cow_images = False" in Nova
+   configuration are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-March/000213.html <http://lists.openstack.org/pipermail/openstack-announce/2014-March/000213.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Stanislaw Pitucha from HP
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1221190 <https://launchpad.net/bugs/1221190>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/82841 <https://review.openstack.org/#/c/82841>`_
+   - `https://review.openstack.org/#/c/82840 <https://review.openstack.org/#/c/82840>`_
+   - `https://review.openstack.org/#/c/86353 <https://review.openstack.org/#/c/86353>`_
+
+
+

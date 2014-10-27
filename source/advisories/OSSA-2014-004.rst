@@ -1,0 +1,46 @@
+=============
+OSSA-2014-004
+=============
+
+Glance Swift store backend password leak
+----------------------------------------
+:Date: February 12, 2014
+
+:Description:
+
+   Nikhil Komawar from Rackspace reported an information leak in Glance
+   logs. The password for the Swift store backend is logged at WARNING
+   level as part of the URL when authentication to a store fails if image
+   location is not disabled by policy or the store is a single-tenant
+   configuration. An attacker with access to the logs (local shell, log
+   aggregation system access, or accidental leak) may leverage this
+   vulnerability to elevate privileges and gain direct full access to the
+   Glance Swift store backend. Only Glance setups using the Swift store
+   backend are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-February/000194.html <http://lists.openstack.org/pipermail/openstack-announce/2014-February/000194.html>`_
+
+:Products affected: 
+   - glance: TODO
+
+
+
+:Credits: - Nikhil Komawar from Rackspace
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1275062 <https://launchpad.net/bugs/1275062>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/71419 <https://review.openstack.org/#/c/71419>`_
+   - `https://review.openstack.org/#/c/72473 <https://review.openstack.org/#/c/72473>`_
+
+
+

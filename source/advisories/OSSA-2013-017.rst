@@ -1,0 +1,46 @@
+=============
+OSSA-2013-017
+=============
+
+Issues in Keystone middleware memcache signing/encryption feature
+-----------------------------------------------------------------
+:Date: June 19, 2013
+
+:Description:
+
+   Paul McMillan from Nebula reported multiple issues in the implementation
+   of memcache signing/encryption feature in Keystone client middleware. An
+   attacker with direct write access to the memcache backend (or in a
+   man-in-the-middle position) could insert malicious data and potentially
+   bypass the encryption (CVE-2013-2166) or signing (CVE-2013-2167)
+   security strategy that was specified. Only setups that make use of
+   memcache caching in the Keystone middleware (specify memcache_servers)
+   and using ENCRYPT or MAC as their memcache_security_strategy are
+   affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-June/000114.html <http://lists.openstack.org/pipermail/openstack-announce/2013-June/000114.html>`_
+
+:Products affected: 
+   - python-keystoneclient: TODO
+
+
+
+:Credits: - Paul McMillan from Nebula
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1175367 <https://launchpad.net/bugs/1175367>`_
+   - `https://launchpad.net/bugs/1175368 <https://launchpad.net/bugs/1175368>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/33661 <https://review.openstack.org/#/c/33661>`_
+
+
+

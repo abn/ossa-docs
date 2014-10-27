@@ -1,0 +1,43 @@
+=============
+OSSA-2013-036
+=============
+
+Insufficient sanitization of Instance Name in Horizon
+-----------------------------------------------------
+:Date: December 11, 2013
+
+:Description:
+
+   Cisco PSIRT reported a vulnerability in the OpenStack Horizon dashboard.
+   By embedding HTML tags in an Instance Name, a tenant may execute a
+   script within an administrator's browser resulting in a cross-site
+   scripting (XSS) attack. Only setups using the Horizon dashboard are
+   affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-December/000173.html <http://lists.openstack.org/pipermail/openstack-announce/2013-December/000173.html>`_
+
+:Products affected: 
+   - horizon: TODO
+
+
+
+:Credits: - Cisco PSIRT from Cisco
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1247675 <https://launchpad.net/bugs/1247675>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/55175 <https://review.openstack.org/#/c/55175>`_
+   - `https://review.openstack.org/#/c/58465 <https://review.openstack.org/#/c/58465>`_
+   - `https://review.openstack.org/#/c/58820 <https://review.openstack.org/#/c/58820>`_
+
+
+

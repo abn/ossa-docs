@@ -1,0 +1,44 @@
+=============
+OSSA-2013-020
+=============
+
+Denial of Service in Nova network source security groups
+--------------------------------------------------------
+:Date: August 06, 2013
+
+:Description:
+
+   Vishvananda Ishaya from Nebula reported a denial of service
+   vulnerability in Nova's handling of network source security group policy
+   updates. By performing a large number of server creation operations, the
+   proportion of updates increases quadratically and may overwhelm
+   nova-network such that it is no longer able to service other requests in
+   a timely fashion. Only setups relying on nova-network are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-August/000127.html <http://lists.openstack.org/pipermail/openstack-announce/2013-August/000127.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Vishvananda Ishaya from Nebula
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1184041 <https://launchpad.net/bugs/1184041>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/39541 <https://review.openstack.org/#/c/39541>`_
+   - `https://review.openstack.org/#/c/39543 <https://review.openstack.org/#/c/39543>`_
+   - `https://review.openstack.org/#/c/39544 <https://review.openstack.org/#/c/39544>`_
+
+
+

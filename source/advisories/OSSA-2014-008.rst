@@ -1,0 +1,42 @@
+=============
+OSSA-2014-008
+=============
+
+Routers can be cross plugged by other tenants
+---------------------------------------------
+:Date: March 27, 2014
+
+:Description:
+
+   Aaron Rosen from VMware reported a vulnerability where Neutron fails to
+   perform proper authorization checks when creating ports. By choosing a
+   device id of a router from a different tenant when creating a port, an
+   authenticated user can access the network of other tenants. This affects
+   deployments of Neutron using plugins relying on the l3-agent.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-March/000212.html <http://lists.openstack.org/pipermail/openstack-announce/2014-March/000212.html>`_
+
+:Products affected: 
+   - neutron: TODO
+
+
+
+:Credits: - Aaron Rosen from VMware
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1243327 <https://launchpad.net/bugs/1243327>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/83391 <https://review.openstack.org/#/c/83391>`_
+   - `https://review.openstack.org/#/c/83393 <https://review.openstack.org/#/c/83393>`_
+
+
+

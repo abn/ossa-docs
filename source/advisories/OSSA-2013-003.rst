@@ -1,0 +1,42 @@
+=============
+OSSA-2013-003
+=============
+
+Keystone denial of service through invalid token requests
+---------------------------------------------------------
+:Date: February 05, 2013
+
+:Description:
+
+   Dan Prince of Red Hat reported a vulnerability in token creation error
+   handling in Keystone. By requesting lots of invalid tokens, an
+   unauthenticated  user may fill up logs on Keystone API servers disks,
+   potentially resulting in a denial of service attack against Keystone.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-February/000074.html <http://lists.openstack.org/pipermail/openstack-announce/2013-February/000074.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Dan Prince from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1098307 <https://launchpad.net/bugs/1098307>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/21213 <https://review.openstack.org/#/c/21213>`_
+   - `https://review.openstack.org/#/c/21215 <https://review.openstack.org/#/c/21215>`_
+   - `https://review.openstack.org/#/c/21216 <https://review.openstack.org/#/c/21216>`_
+
+
+

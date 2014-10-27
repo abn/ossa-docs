@@ -1,0 +1,44 @@
+=============
+OSSA-2012-002
+=============
+
+Extremely long passwords can crash Keystone
+-------------------------------------------
+:Date: March 27, 2012
+
+:Description:
+
+   Dan Prince reported a vulnerability in Keystone. He discovered that you
+   can remotely trigger a crash in Keystone by sending an extremely long
+   password. When Keystone is validating the password, glibc allocates
+   space on the stack for the entire password. If the password is long
+   enough, stack space can be exhausted, resulting in a crash. This
+   vulnerability is mitigated by a patch to impose a reasonablelimit on
+   password length (4 kB).
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg09193.html <https://lists.launchpad.net/openstack/msg09193.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Dan Prince from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/957359 <https://launchpad.net/bugs/957359>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/5507 <https://review.openstack.org/#/c/5507>`_
+   - `https://review.openstack.org/#/c/5865 <https://review.openstack.org/#/c/5865>`_
+
+
+

@@ -1,0 +1,48 @@
+=============
+OSSA-2013-026
+=============
+
+Potential denial of service on Nova when using Qpid
+---------------------------------------------------
+:Date: September 12, 2013
+
+:Description:
+
+   Jaroslav Henner from Red Hat reported a vulnerability in Nova when using
+   Apache Qpid as the RPC backend. By sending any random text longer than
+   65K characters to an instance console and requesting the console log
+   contents through the API, an authenticated user may disrupt the
+   nova-compute node his instance is running on. This vulnerability could
+   be leveraged in a Denial of Service attack against the cloud provider.
+   Only Folsom and Grizzly setups using Qpid as their RPC backend are
+   affected. Havana setups, or setups using other RPC backends (like
+   RabbitMQ), are all unaffected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-September/000143.html <http://lists.openstack.org/pipermail/openstack-announce/2013-September/000143.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Jaroslav Henner from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1215091 <https://launchpad.net/bugs/1215091>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/44695 <https://review.openstack.org/#/c/44695>`_
+   - `https://review.openstack.org/#/c/44700 <https://review.openstack.org/#/c/44700>`_
+   - `https://review.openstack.org/#/c/45426 <https://review.openstack.org/#/c/45426>`_
+   - `https://review.openstack.org/#/c/43303 <https://review.openstack.org/#/c/43303>`_
+
+
+

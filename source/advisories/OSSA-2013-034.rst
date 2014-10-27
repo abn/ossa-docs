@@ -1,0 +1,42 @@
+=============
+OSSA-2013-034
+=============
+
+Heat CFN policy rules not all enforced
+--------------------------------------
+:Date: December 11, 2013
+
+:Description:
+
+   Steven Hardy from Red Hat reported a vulnerability in Heat's default API
+   policy enforcement. By calling the CreateStack or UpdateStack methods,
+   an in-instance user may be able to create or update a stack in violation
+   of the default policy. Only setups using Heat's
+   cloudformation-compatible API are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-December/000170.html <http://lists.openstack.org/pipermail/openstack-announce/2013-December/000170.html>`_
+
+:Products affected: 
+   - heat: TODO
+
+
+
+:Credits: - Steven Hardy from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1256049 <https://launchpad.net/bugs/1256049>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/61452 <https://review.openstack.org/#/c/61452>`_
+   - `https://review.openstack.org/#/c/61454 <https://review.openstack.org/#/c/61454>`_
+
+
+

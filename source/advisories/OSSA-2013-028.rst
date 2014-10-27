@@ -1,0 +1,46 @@
+=============
+OSSA-2013-028
+=============
+
+Unintentional role granting with Keystone LDAP backend
+------------------------------------------------------
+:Date: October 30, 2013
+
+:Description:
+
+   The IBM OpenStack test team reported a vulnerability in role change code
+   within the Keystone LDAP backend. When a role on a tenant is removed
+   from a user, and that user doesn't have that role on the tenant, then
+   the user may actually be granted the role on the tenant. A user could
+   use social engineering and leverage that vulnerability to get extra
+   roles granted, or may accidentally be granted extra roles. Only Keystone
+   setups using a LDAP backend are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-October/000158.html <http://lists.openstack.org/pipermail/openstack-announce/2013-October/000158.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - The IBM OpenStack test team from IBM
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1242855 <https://launchpad.net/bugs/1242855>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/5310 <https://review.openstack.org/#/c/5310>`_
+   - `https://review.openstack.org/#/c/53012 <https://review.openstack.org/#/c/53012>`_
+   - `https://review.openstack.org/#/c/53154 <https://review.openstack.org/#/c/53154>`_
+   - `https://review.openstack.org/#/c/53146 <https://review.openstack.org/#/c/53146>`_
+
+
+

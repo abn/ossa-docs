@@ -1,0 +1,44 @@
+=============
+OSSA-2012-005
+=============
+
+No quota enforced on security group rules
+-----------------------------------------
+:Date: April 19, 2012
+
+:Description:
+
+   Dan Prince reported a vulnerability in Nova. He discovered that there
+   was no limit on the number of security group rules a user can create. By
+   creating a very large set of rules, an unreasonable number of iptables
+   rules will be created on compute nodes, resulting in a denial of
+   service.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg10268.html <https://lists.launchpad.net/openstack/msg10268.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Dan Prince from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/969545 <https://launchpad.net/bugs/969545>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/6653 <https://review.openstack.org/#/c/6653>`_
+   - `https://review.openstack.org/#/c/6654 <https://review.openstack.org/#/c/6654>`_
+   - `https://review.openstack.org/#/c/6655 <https://review.openstack.org/#/c/6655>`_
+   - `https://review.openstack.org/#/c/6656 <https://review.openstack.org/#/c/6656>`_
+
+
+

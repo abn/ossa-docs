@@ -1,0 +1,47 @@
+=============
+OSSA-2013-033
+=============
+
+Metadata queries from Neutron to Nova are not restricted by tenant
+------------------------------------------------------------------
+:Date: December 11, 2013
+
+:Description:
+
+   Aaron Rosen from VMware reported a vulnerability in the metadata access
+   from OpenStack Neutron to Nova. Because of a missing authorization check
+   on port binding, by guessing an instance_id a tenant may retrieve
+   another tenant's metadata resulting in information disclosure. Only
+   OpenStack setups running neutron-metadata-agent are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-December/000169.html <http://lists.openstack.org/pipermail/openstack-announce/2013-December/000169.html>`_
+
+:Products affected: 
+   - neutron: TODO
+   - nova: TODO
+
+
+
+:Credits: - Aaron Rosen from VMware
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1235450 <https://launchpad.net/bugs/1235450>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/61439 <https://review.openstack.org/#/c/61439>`_
+   - `https://review.openstack.org/#/c/61428 <https://review.openstack.org/#/c/61428>`_
+   - `https://review.openstack.org/#/c/61442 <https://review.openstack.org/#/c/61442>`_
+   - `https://review.openstack.org/#/c/61435 <https://review.openstack.org/#/c/61435>`_
+   - `https://review.openstack.org/#/c/61443 <https://review.openstack.org/#/c/61443>`_
+   - `https://review.openstack.org/#/c/61437 <https://review.openstack.org/#/c/61437>`_
+
+
+

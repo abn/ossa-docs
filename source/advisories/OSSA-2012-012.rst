@@ -1,0 +1,42 @@
+=============
+OSSA-2012-012
+=============
+
+Open redirect through 'next' parameter
+--------------------------------------
+:Date: August 30, 2012
+
+:Description:
+
+   Thomas Biege from SUSE reported a vulnerability in Horizon
+   authentication mechanism. By adding a malicious 'next' parameter to a
+   Horizon authentication URL and enticing an unsuspecting user to follow
+   it, the victim might get redirected after authentication to a malicious
+   site where useful information could be extracted. Only setups running
+   Essex are affected.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg16278.html <https://lists.launchpad.net/openstack/msg16278.html>`_
+
+:Products affected: 
+   - horizon: TODO
+
+
+
+:Credits: - Thomas Biege from SUSE
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1039077 <https://launchpad.net/bugs/1039077>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/12193 <https://review.openstack.org/#/c/12193>`_
+
+
+

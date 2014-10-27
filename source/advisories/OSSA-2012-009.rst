@@ -1,0 +1,43 @@
+=============
+OSSA-2012-009
+=============
+
+Scheduler denial of service through scheduler_hints
+---------------------------------------------------
+:Date: July 11, 2012
+
+:Description:
+
+   Dan Prince from Red Hat reported a vulnerability in Nova scheduler
+   nodes. By creating servers with malicious scheduler_hints, an
+   authenticated user may generate a huge amount of database calls,
+   potentially resulting in a Denial of Service attack against Nova
+   scheduler nodes. Only setups exposing the OpenStack API and enabling
+   DifferentHostFilter and/or SameHostFilter are affected.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg14452.html <https://lists.launchpad.net/openstack/msg14452.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Dan Prince from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1017795 <https://launchpad.net/bugs/1017795>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/9637 <https://review.openstack.org/#/c/9637>`_
+   - `https://review.openstack.org/#/c/9639 <https://review.openstack.org/#/c/9639>`_
+
+
+

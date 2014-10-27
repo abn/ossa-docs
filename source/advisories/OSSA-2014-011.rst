@@ -1,0 +1,44 @@
+=============
+OSSA-2014-011
+=============
+
+RBAC policy not properly enforced in Nova EC2 API
+-------------------------------------------------
+:Date: April 09, 2014
+
+:Description:
+
+   Marc Heckmann from Ubisoft reported a vulnerability in the Nova EC2 API
+   security group implementation. RBAC policies are not enforced when using
+   the EC2 API, in particular the add_rules, remove_rules and destroy
+   methods. A restricted user may overcome his limitation by using EC2 API
+   resulting in unauthorized action on security groups. Only setups using
+   non-default RBAC rules for Nova may be affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-April/000219.html <http://lists.openstack.org/pipermail/openstack-announce/2014-April/000219.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Marc Heckmann from Ubisoft
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1290537 <https://launchpad.net/bugs/1290537>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/86358 <https://review.openstack.org/#/c/86358>`_
+   - `https://review.openstack.org/#/c/86360 <https://review.openstack.org/#/c/86360>`_
+   - `https://review.openstack.org/#/c/86361 <https://review.openstack.org/#/c/86361>`_
+
+
+

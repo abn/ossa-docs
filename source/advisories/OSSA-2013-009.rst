@@ -1,0 +1,43 @@
+=============
+OSSA-2013-009
+=============
+
+Keystone PKI tokens online validation bypasses revocation check
+---------------------------------------------------------------
+:Date: March 20, 2013
+
+:Description:
+
+   Guang Yee from HP reported a vulnerability in the revocation check for
+   Keystone PKI tokens. Those tokens are supposed to be validated locally
+   using cryptographic checks, but the user also has the option of asking
+   the server to validate them. In that case, the online verification of
+   PKI tokens would bypass the revocation check, potentially affirming
+   revocated tokens are still valid. Only Folsom setups making use of
+   online verification of PKI tokens are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-March/000087.html <http://lists.openstack.org/pipermail/openstack-announce/2013-March/000087.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Guang Yee from HP
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1129713 <https://launchpad.net/bugs/1129713>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/24906 <https://review.openstack.org/#/c/24906>`_
+
+
+

@@ -1,0 +1,41 @@
+=============
+OSSA-2013-035
+=============
+
+Heat ReST API doesn't respect tenant scoping
+--------------------------------------------
+:Date: December 11, 2013
+
+:Description:
+
+   Steven Hardy from Red Hat reported a vulnerability in the Heat ReST API.
+   By changing the request path, an authenticated client may override their
+   tenant scope resulting in privilege escalation. Only setups exposing the
+   Heat orchestration ReST interface are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-December/000172.html <http://lists.openstack.org/pipermail/openstack-announce/2013-December/000172.html>`_
+
+:Products affected: 
+   - heat: TODO
+
+
+
+:Credits: - Steven Hardy from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1256983 <https://launchpad.net/bugs/1256983>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/61455 <https://review.openstack.org/#/c/61455>`_
+   - `https://review.openstack.org/#/c/61456 <https://review.openstack.org/#/c/61456>`_
+
+
+

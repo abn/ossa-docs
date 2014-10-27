@@ -1,0 +1,49 @@
+=============
+OSSA-2013-006
+=============
+
+VNC proxy can connect to the wrong VM
+-------------------------------------
+:Date: February 26, 2013
+
+:Description:
+
+   Loganathan Parthipan (HP) and Rohit Karajgi (NTT Data) independently
+   reported a vulnerability in Nova. If a user requests a console and then
+   deletes the VM, it is possible that the console token could allow
+   connectivity to a different VM before the console token expires if the
+   VNC port gets reused in that time period. This issue can be worked
+   around by disabling VNC support.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-February/000082.html <http://lists.openstack.org/pipermail/openstack-announce/2013-February/000082.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits:
+
+   - Loganathan Parthipan from HP
+   - Rohit Karajgi from NTT Data
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1125378 <https://launchpad.net/bugs/1125378>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/22086 <https://review.openstack.org/#/c/22086>`_
+   - `https://review.openstack.org/#/c/22616 <https://review.openstack.org/#/c/22616>`_
+   - `https://review.openstack.org/#/c/22872 <https://review.openstack.org/#/c/22872>`_
+   - `https://review.openstack.org/#/c/23768 <https://review.openstack.org/#/c/23768>`_
+   - `https://review.openstack.org/#/c/22758 <https://review.openstack.org/#/c/22758>`_
+
+
+

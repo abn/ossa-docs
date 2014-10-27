@@ -1,0 +1,50 @@
+=============
+OSSA-2013-014
+=============
+
+Missing expiration check in Keystone PKI tokens validation
+----------------------------------------------------------
+:Date: May 28, 2013
+
+:Description:
+
+   Eoghan Glynn from Red Hat and Alex Meade from Rackspace both reported a
+   vulnerability in expiry checks for PKI tokens in the Keystone
+   authentication middleware. Expired tokens for authenticated users could
+   continue to be used, potentially resulting in the bypass of intended
+   security policies. The effect of PKI token revocation is also reversed
+   when the token expires, in the sense that a revoked token is once again
+   treated as being valid. Only setups using PKI tokens are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-May/000106.html <http://lists.openstack.org/pipermail/openstack-announce/2013-May/000106.html>`_
+
+:Products affected:
+
+   
+   - keystone: TODO
+   - python-keystoneclient: TODO
+
+
+
+:Credits:
+
+   - Eoghan Glynn from Red Hat
+   - Alex Meade from Rackspace
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1179615 <https://launchpad.net/bugs/1179615>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/30742 <https://review.openstack.org/#/c/30742>`_
+   - `https://review.openstack.org/#/c/30743 <https://review.openstack.org/#/c/30743>`_
+
+
+

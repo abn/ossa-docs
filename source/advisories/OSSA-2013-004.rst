@@ -1,0 +1,61 @@
+=============
+OSSA-2013-004
+=============
+
+Information leak and Denial of Service using XML entities
+---------------------------------------------------------
+:Date: February 19, 2013
+
+:Description:
+
+   Jonathan Murray from NCC Group, Joshua Harlow from Yahoo! and Stuart
+   Stent independently reported a vulnerabilities in the parsing of  XML
+   requests in Python XML libraries used in Keystone, Nova and Cinder. By
+   using entities in XML requests, an unauthenticated attacker may consume
+   excessive  resources on the Keystone, Nova or Cinder API servers,
+   resulting in a denial of service and potentially a crash
+   (CVE-2013-1664). Authenticated attackers  may also leverage XML entities
+   to read the content of a local file on the Keystone API server
+   (CVE-2013-1665). This only affects servers with XML support enabled.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-February/000078.html <http://lists.openstack.org/pipermail/openstack-announce/2013-February/000078.html>`_
+
+:Products affected:
+
+   
+   - keystone: TODO
+   - nova: TODO
+   - cinder: TODO
+
+
+
+:Credits:
+
+   - Jonathan Murray from NCC Group
+   - Joshua Harlow from Yahoo!
+   - StuartStent from UNKNOWN
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1100282 <https://launchpad.net/bugs/1100282>`_
+   - `https://launchpad.net/bugs/1100279 <https://launchpad.net/bugs/1100279>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/22309 <https://review.openstack.org/#/c/22309>`_
+   - `https://review.openstack.org/#/c/22310 <https://review.openstack.org/#/c/22310>`_
+   - `https://review.openstack.org/#/c/22315 <https://review.openstack.org/#/c/22315>`_
+   - `https://review.openstack.org/#/c/22312 <https://review.openstack.org/#/c/22312>`_
+   - `https://review.openstack.org/#/c/22311 <https://review.openstack.org/#/c/22311>`_
+   - `https://review.openstack.org/#/c/22314 <https://review.openstack.org/#/c/22314>`_
+   - `https://review.openstack.org/#/c/22313 <https://review.openstack.org/#/c/22313>`_
+   - `https://review.openstack.org/#/c/22316 <https://review.openstack.org/#/c/22316>`_
+
+
+

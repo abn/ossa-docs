@@ -1,0 +1,44 @@
+=============
+OSSA-2014-016
+=============
+
+Heat template URL information leakage
+-------------------------------------
+:Date: May 23, 2014
+
+:Description:
+
+   Jason Dunsmore from Rackspace reported a vulnerability in Heat. An
+   authenticated user may temporarily see the URL of a provider template
+   used in another tenant by listing heat resources types. This may result
+   in disclosure of additional information if the template itself can be
+   accessed. The URL disappears from the listing after a certain point in
+   the stack creation. All Heat setups are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-May/000232.html <http://lists.openstack.org/pipermail/openstack-announce/2014-May/000232.html>`_
+
+:Products affected: 
+   - heat: TODO
+
+
+
+:Credits: - Jason Dunsmore from Rackspace
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1311223 <https://launchpad.net/bugs/1311223>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/89695 <https://review.openstack.org/#/c/89695>`_
+   - `https://review.openstack.org/#/c/94625 <https://review.openstack.org/#/c/94625>`_
+   - `https://review.openstack.org/#/c/94644 <https://review.openstack.org/#/c/94644>`_
+
+
+

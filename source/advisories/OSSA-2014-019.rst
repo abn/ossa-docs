@@ -1,0 +1,45 @@
+=============
+OSSA-2014-019
+=============
+
+Neutron L3-agent DoS through IPv6 subnet
+----------------------------------------
+:Date: June 18, 2014
+
+:Description:
+
+   Thiago Martins from Hewlett Packard reported a vulnerability in Neutron
+   L3-agent. By creating an IPv6 private subnet attached to a L3 router, an
+   authenticated user may break the L3-agent, preventing further floating
+   IPv4 addresses from being attached for the entire cloud. Note: removal
+   of the faulty network can not be done using the API and must be cleaned
+   at the database level. Only Neutron setups using IPv6 and L3-agent are
+   affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-June/000242.html <http://lists.openstack.org/pipermail/openstack-announce/2014-June/000242.html>`_
+
+:Products affected: 
+   - neutron: TODO
+
+
+
+:Credits: - Thiago Martins from HP
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1309195 <https://launchpad.net/bugs/1309195>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/88584 <https://review.openstack.org/#/c/88584>`_
+   - `https://review.openstack.org/#/c/95938 <https://review.openstack.org/#/c/95938>`_
+   - `https://review.openstack.org/#/c/95939 <https://review.openstack.org/#/c/95939>`_
+
+
+

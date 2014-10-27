@@ -1,0 +1,47 @@
+=============
+OSSA-2013-012
+=============
+
+Nova fails to verify image virtual size
+---------------------------------------
+:Date: May 16, 2013
+
+:Description:
+
+   Loganathan Parthipan publicly reported a vulnerability in Nova. Nova did
+   not implement checking for the virtual size of a qcow2 image used as
+   ephemeral storage for instances. It is therefore possible for a user to
+   create an image which has a large virtual size, but little data. Once
+   the instance is created, the user can then proceed to fill the virtual
+   disk, and consume all available disk on the host node file system.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-May/000102.html <http://lists.openstack.org/pipermail/openstack-announce/2013-May/000102.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Loganathan Parthipan from HP
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1177830 <https://launchpad.net/bugs/1177830>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/28717 <https://review.openstack.org/#/c/28717>`_
+   - `https://review.openstack.org/#/c/28901 <https://review.openstack.org/#/c/28901>`_
+   - `https://review.openstack.org/#/c/29192 <https://review.openstack.org/#/c/29192>`_
+   - `https://review.openstack.org/#/c/54765 <https://review.openstack.org/#/c/54765>`_
+   - `https://review.openstack.org/#/c/54767 <https://review.openstack.org/#/c/54767>`_
+   - `https://review.openstack.org/#/c/54768 <https://review.openstack.org/#/c/54768>`_
+
+
+

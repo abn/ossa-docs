@@ -1,0 +1,43 @@
+=============
+OSSA-2012-003
+=============
+
+Long server names grow nova-api log files significantly
+-------------------------------------------------------
+:Date: March 29, 2012
+
+:Description:
+
+   Dan Prince reported a vulnerability in OpenStack Compute (Nova) API
+   servers. By PUTing or POSTing extremely long server names to the
+   OpenStack API, any authenticated user may grow nova-api log files
+   significantly, potentially resulting in disk space exhaustion and denial
+   of service to the affected nova-api nodes. only setups running the
+   OpenStack API are affected.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg09311.html <https://lists.launchpad.net/openstack/msg09311.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Dan Prince from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/962515 <https://launchpad.net/bugs/962515>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/5955 <https://review.openstack.org/#/c/5955>`_
+   - `https://review.openstack.org/#/c/5957 <https://review.openstack.org/#/c/5957>`_
+
+
+

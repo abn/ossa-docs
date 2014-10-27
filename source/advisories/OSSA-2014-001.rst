@@ -1,0 +1,43 @@
+=============
+OSSA-2014-001
+=============
+
+Nova live snapshots use an insecure local directory
+---------------------------------------------------
+:Date: January 13, 2014
+
+:Description:
+
+   Daniel Berrange from Red Hat reported that the directories used to
+   temporarily store live snapshots on Nova compute nodes were writable to
+   all local users. A local attacker with shell access on compute nodes
+   could therefore read and modify the contents of live snapshots before
+   those are uploaded to the image service.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-January/000184.html <http://lists.openstack.org/pipermail/openstack-announce/2014-January/000184.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Daniel Berrange from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1227027 <https://launchpad.net/bugs/1227027>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/58852 <https://review.openstack.org/#/c/58852>`_
+   - `https://review.openstack.org/#/c/60548 <https://review.openstack.org/#/c/60548>`_
+   - `https://review.openstack.org/#/c/60550 <https://review.openstack.org/#/c/60550>`_
+
+
+

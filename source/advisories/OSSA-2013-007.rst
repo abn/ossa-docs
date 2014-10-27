@@ -1,0 +1,44 @@
+=============
+OSSA-2013-007
+=============
+
+Backend credentials leak in Glance v1 API
+-----------------------------------------
+:Date: March 14, 2013
+
+:Description:
+
+   Stuart McLaren from HP reported a vulnerability in the information
+   potentially returned to the user in Glance v1 API. If an authenticated
+   user requests, through the v1 API, an image that is already cached, the
+   headers returned may disclose the Glance operator's backend credentials
+   for that endpoint. Only setups accepting the Glance v1 API and using
+   either the single-tenant Swift store or S3 store are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-March/000085.html <http://lists.openstack.org/pipermail/openstack-announce/2013-March/000085.html>`_
+
+:Products affected: 
+   - glance: TODO
+
+
+
+:Credits: - Stuart McLaren from HP
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1135541 <https://launchpad.net/bugs/1135541>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/24437 <https://review.openstack.org/#/c/24437>`_
+   - `https://review.openstack.org/#/c/24438 <https://review.openstack.org/#/c/24438>`_
+   - `https://review.openstack.org/#/c/24439 <https://review.openstack.org/#/c/24439>`_
+
+
+

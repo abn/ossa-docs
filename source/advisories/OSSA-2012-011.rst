@@ -1,0 +1,46 @@
+=============
+OSSA-2012-011
+=============
+
+Compute node filesystem injection/corruption
+--------------------------------------------
+:Date: August 07, 2012
+
+:Description:
+
+   Pádraig Brady from Red Hat discovered that the fix implemented for
+   CVE-2012-3361 (OSSA-2012-008) was not covering all attack scenarios. By
+   crafting a malicious image with root-readable-only symlinks and
+   requesting a server based on it, an authenticated user could still
+   corrupt arbitrary files (all setups affected) or inject arbitrary files
+   (Essex and later setups with OpenStack API enabled and a libvirt-based
+   hypervisor) on the host filesystem, potentially resulting in full
+   compromise of that compute node.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg15549.html <https://lists.launchpad.net/openstack/msg15549.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Pádraig Brady from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1031311 <https://launchpad.net/bugs/1031311>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/10951 <https://review.openstack.org/#/c/10951>`_
+   - `https://review.openstack.org/#/c/10952 <https://review.openstack.org/#/c/10952>`_
+   - `https://review.openstack.org/#/c/10953 <https://review.openstack.org/#/c/10953>`_
+
+
+

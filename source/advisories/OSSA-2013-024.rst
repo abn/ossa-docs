@@ -1,0 +1,43 @@
+=============
+OSSA-2013-024
+=============
+
+Resource limit circumvention in Nova private flavors
+----------------------------------------------------
+:Date: August 28, 2013
+
+:Description:
+
+   Ken'ichi Ohmichi from NEC reported that the fix for OSSA 2013-019
+   (CVE-2013-2256) was incomplete. Any tenant was still able to boot any
+   other tenant's private flavors by guessing a flavor ID. This potentially
+   allowed circumvention of any resource limits enforced through the
+   os-flavor-access:is_public property.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-August/000138.html <http://lists.openstack.org/pipermail/openstack-announce/2013-August/000138.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Ken'ichi Ohmichi from NEC
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1212179 <https://launchpad.net/bugs/1212179>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/42922 <https://review.openstack.org/#/c/42922>`_
+   - `https://review.openstack.org/#/c/43281 <https://review.openstack.org/#/c/43281>`_
+   - `https://review.openstack.org/#/c/43296 <https://review.openstack.org/#/c/43296>`_
+
+
+

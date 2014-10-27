@@ -1,0 +1,42 @@
+=============
+OSSA-2014-005
+=============
+
+Missing SSL certificate check in Python Swift client
+----------------------------------------------------
+:Date: February 17, 2014
+
+:Description:
+
+   Thomas Leaman from HP reported that the Python Swift client was failing
+   to properly check certificates during the establishment of HTTPS
+   connections. A remote attacker with access over segments of the network
+   between client and server could potentially set up a man-in-the-middle
+   attack and access the contents of the Swift client's communication with
+   the server, including any used credentials.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-February/000198.html <http://lists.openstack.org/pipermail/openstack-announce/2014-February/000198.html>`_
+
+:Products affected: 
+   - python-swiftclient: TODO
+
+
+
+:Credits: - Thomas Leaman from HP
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1199783 <https://launchpad.net/bugs/1199783>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/69187 <https://review.openstack.org/#/c/69187>`_
+
+
+

@@ -1,0 +1,44 @@
+=============
+OSSA-2013-008
+=============
+
+Nova DoS by allocating all Fixed IPs
+------------------------------------
+:Date: March 14, 2013
+
+:Description:
+
+   Vish Ishaya reported a vulnerability in Nova where there is no quota for
+   Fixed IPs. Previously the instance quota acted as a proxy for a Fixed IP
+   quota, but if your configuration allows an instance to consume more than
+   one Fixed IP via an extension such as multinic then this is no longer
+   true. Running out of Fixed IPs would result in not being able to spawn
+   new instances.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-March/000086.html <http://lists.openstack.org/pipermail/openstack-announce/2013-March/000086.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Vish Ishaya from Nebula
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1125468 <https://launchpad.net/bugs/1125468>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/24451 <https://review.openstack.org/#/c/24451>`_
+   - `https://review.openstack.org/#/c/24452 <https://review.openstack.org/#/c/24452>`_
+   - `https://review.openstack.org/#/c/24453 <https://review.openstack.org/#/c/24453>`_
+
+
+

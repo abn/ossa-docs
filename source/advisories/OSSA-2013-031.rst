@@ -1,0 +1,44 @@
+=============
+OSSA-2013-031
+=============
+
+Ceilometer DB2/MongoDB backend password leak
+--------------------------------------------
+:Date: November 25, 2013
+
+:Description:
+
+   Eric Brown from IBM reported an information leak in Ceilometer logs. The
+   password for the DB2 or MongoDB backends was logged at INFO level in the
+   ceilometer-api logs. An attacker with access to the logs (local shell,
+   log aggregation system access, or accidental leak) may leverage this
+   vulnerability to elevate privileges and gain direct full access to the
+   Ceilometer backend. Only Ceilometer setups using the DB2 or MongoDB
+   backends are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-November/000164.html <http://lists.openstack.org/pipermail/openstack-announce/2013-November/000164.html>`_
+
+:Products affected: 
+   - ceilometer: TODO
+
+
+
+:Credits: - Eric Brown from IBM
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1244476 <https://launchpad.net/bugs/1244476>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/54553 <https://review.openstack.org/#/c/54553>`_
+   - `https://review.openstack.org/#/c/56396 <https://review.openstack.org/#/c/56396>`_
+
+
+

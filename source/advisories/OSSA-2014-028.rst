@@ -1,0 +1,50 @@
+=============
+OSSA-2014-028
+=============
+
+Glance store DoS through disk space exhaustion
+----------------------------------------------
+:Date: August 21, 2014
+
+:Description:
+
+   Thomas Leaman and Stuart McLaren from Hewlett Packard reported a
+   vulnerability in Glance. By uploading a large enough image to a Glance
+   store, an authenticated user may fill the store space because the
+   image_size_cap configuration option is not honored. This may prevent
+   further image upload and/or cause service disruption. Note that the
+   import method is not affected. All Glance setups using API v2 are
+   affected (unless you use a policy to restrict/disable image upload).
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-August/000267.html <http://lists.openstack.org/pipermail/openstack-announce/2014-August/000267.html>`_
+
+:Products affected:
+
+   
+   - glance: up to 2013.2.3 and 2014.1 versions up to 2014.1.2
+
+
+
+:Credits:
+
+   - Thomas Leaman from HP
+   - Stuart McLaren from HP
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1315321 <https://launchpad.net/bugs/1315321>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/91764 <https://review.openstack.org/#/c/91764>`_
+   - `https://review.openstack.org/#/c/115280 <https://review.openstack.org/#/c/115280>`_
+   - `https://review.openstack.org/#/c/115289 <https://review.openstack.org/#/c/115289>`_
+
+
+

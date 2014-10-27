@@ -1,0 +1,47 @@
+=============
+OSSA-2012-017
+=============
+
+Authentication bypass for image deletion
+----------------------------------------
+:Date: November 07, 2012
+
+:Description:
+
+   Gabe Westmaas from Rackspace reported a vulnerability in Glance
+   authentication of image deletion requests. Authenticated users may be
+   able to delete arbitrary, non-protected images from Glance servers. Only
+   Folsom/Grizzly deployments that expose the v1 API are affected by this
+   vulnerability. Additionally, Essex deployments that use the
+   delayed_delete option are also affected.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg18386.html, https://lists.launchpad.net/openstack/msg18466.html <https://lists.launchpad.net/openstack/msg18386.html, https://lists.launchpad.net/openstack/msg18466.html>`_
+
+:Products affected: 
+   - glance: TODO
+
+
+
+:Credits: - Gabe Westmaas from Rackspace
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1065187 <https://launchpad.net/bugs/1065187>`_
+   - `https://launchpad.net/bugs/1076506 <https://launchpad.net/bugs/1076506>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/15562 <https://review.openstack.org/#/c/15562>`_
+   - `https://review.openstack.org/#/c/15563 <https://review.openstack.org/#/c/15563>`_
+   - `https://review.openstack.org/#/c/15564 <https://review.openstack.org/#/c/15564>`_
+   - `https://review.openstack.org/#/c/15658 <https://review.openstack.org/#/c/15658>`_
+   - `https://review.openstack.org/#/c/15659 <https://review.openstack.org/#/c/15659>`_
+
+
+

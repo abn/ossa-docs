@@ -1,0 +1,43 @@
+=============
+OSSA-2012-020
+=============
+
+Information leak in libvirt LVM-backed instances
+------------------------------------------------
+:Date: December 11, 2012
+
+:Description:
+
+   Eric Windisch from Cloudscaling reported a vulnerability in libvirt
+   LVM-backed instances. The physical volume content was not wiped out
+   before being deallocated and passed to an instance, which may result in
+   the disclosure of information from previously-allocated logical
+   volumes.Only setups using libvirt and LVM-backed instances
+   (libvirt_images_type=lvm) are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2012-December/000059.html <http://lists.openstack.org/pipermail/openstack-announce/2012-December/000059.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Eric Windisch from Cloudscaling
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1070539 <https://launchpad.net/bugs/1070539>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/17856 <https://review.openstack.org/#/c/17856>`_
+   - `https://review.openstack.org/#/c/17857 <https://review.openstack.org/#/c/17857>`_
+
+
+

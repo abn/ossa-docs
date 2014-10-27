@@ -1,0 +1,41 @@
+=============
+OSSA-2013-013
+=============
+
+Keystone client local information disclosure
+--------------------------------------------
+:Date: May 23, 2013
+
+:Description:
+
+   Jake Dahn from Nebula reported a vulnerability that the keystone client
+   only allows passwords to be updated in a clear text command-line
+   argument, which may enable other local users to obtain sensitive
+   information by listing the process and potentially leaves a record of
+   the password within the shell command history.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg23923.html <https://lists.launchpad.net/openstack/msg23923.html>`_
+
+:Products affected: 
+   - python-keystoneclient: TODO
+
+
+
+:Credits: - Jake Dahn from Nebula
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/938315 <https://launchpad.net/bugs/938315>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/28702 <https://review.openstack.org/#/c/28702>`_
+
+
+

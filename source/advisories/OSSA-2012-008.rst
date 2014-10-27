@@ -1,0 +1,53 @@
+=============
+OSSA-2012-008
+=============
+
+Arbitrary file injection/corruption through directory traversal
+---------------------------------------------------------------
+:Date: July 03, 2012
+
+:Description:
+
+   Matthias Weckbecker from SUSE Security team reported a vulnerability in
+   Nova compute nodes handling of file injection in disk images. By
+   requesting iles to be injected in malicious paths, a remote
+   authenticated user could inject files in arbitrary locations on the host
+   file system, potentially resulting in full compromise of the compute
+   node. Only Essex and later setups running the OpenStack API over
+   libvirt-based hypervisors are affected. Upon further inspection of the
+   code, Pádraig Brady from Red Hat found an additional vulnerability. By
+   crafting a malicious image and requesting an instance based on it, a
+   remote authenticated user may corrupt arbitrary files on the host
+   filesystem, potentially resulting in a denial of service. This affects
+   all setups.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg14089.html <https://lists.launchpad.net/openstack/msg14089.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits:
+
+   - Matthias Weckbecker from SUSE
+   - Pádraig Brady from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1015531 <https://launchpad.net/bugs/1015531>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/9266 <https://review.openstack.org/#/c/9266>`_
+   - `https://review.openstack.org/#/c/9267 <https://review.openstack.org/#/c/9267>`_
+   - `https://review.openstack.org/#/c/9268 <https://review.openstack.org/#/c/9268>`_
+
+
+

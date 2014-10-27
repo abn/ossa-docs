@@ -1,0 +1,43 @@
+=============
+OSSA-2014-022
+=============
+
+Keystone V2 trusts privilege escalation through user supplied
+-------------------------------------------------------------
+:Date: July 02, 2014
+
+:Description:
+
+   Jamie Lennox from Red Hat reported a vulnerability in Keystone trusts.
+   By using an out of scope project id, a trustee may gain unauthorized
+   access if the trustor has the required roles in the requested project
+   id. All Keystone deployments configured to enable trusts and V2 API are
+   affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-July/000248.html <http://lists.openstack.org/pipermail/openstack-announce/2014-July/000248.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Jamie Lennox from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1331912 <https://launchpad.net/bugs/1331912>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/104216 <https://review.openstack.org/#/c/104216>`_
+   - `https://review.openstack.org/#/c/104217 <https://review.openstack.org/#/c/104217>`_
+   - `https://review.openstack.org/#/c/104218 <https://review.openstack.org/#/c/104218>`_
+
+
+

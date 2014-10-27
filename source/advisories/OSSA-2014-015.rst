@@ -1,0 +1,46 @@
+=============
+OSSA-2014-015
+=============
+
+Keystone user and group id mismatch
+-----------------------------------
+:Date: May 21, 2014
+
+:Description:
+
+   Michael Stancampiano from IBM reported a vulnerability in Keystone.
+   Someone with write access to the user and group repository (such as the
+   LDAP directory server) may willingly or unwillingly grant additional
+   rights by picking the same IDs for users and groups, resulting in roles
+   assigned to a group being assigned to the affected user even if he is
+   not a member of this group. Only Keystone setups using LDAP for the
+   Identity driver are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-May/000231.html <http://lists.openstack.org/pipermail/openstack-announce/2014-May/000231.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Michael Stancampiano from IBM
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1309228 <https://launchpad.net/bugs/1309228>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/94396 <https://review.openstack.org/#/c/94396>`_
+   - `https://review.openstack.org/#/c/94470 <https://review.openstack.org/#/c/94470>`_
+   - `https://review.openstack.org/#/c/94397 <https://review.openstack.org/#/c/94397>`_
+   - `https://review.openstack.org/#/c/95263 <https://review.openstack.org/#/c/95263>`_
+
+
+

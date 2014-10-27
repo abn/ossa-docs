@@ -1,0 +1,44 @@
+=============
+OSSA-2013-002
+=============
+
+Backend password leak in Glance error message
+---------------------------------------------
+:Date: January 29, 2013
+
+:Description:
+
+   Dan Prince of Red Hat discovered an issue in Glance error reporting. By
+   creating an image in Glance by URL that references a mis-configured
+   Swift endpoint, or if the Swift endpoint that a previously-ACTIVE image
+   references for any reason becomes unusable, an authenticated user may
+   access the  Glance operator's Swift credentials for that endpoint. Only
+   setups that use the single-tenant Swift store are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-January/000071.html <http://lists.openstack.org/pipermail/openstack-announce/2013-January/000071.html>`_
+
+:Products affected: 
+   - glance: TODO
+
+
+
+:Credits: - Dan Prince from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1098962 <https://launchpad.net/bugs/1098962>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/20695 <https://review.openstack.org/#/c/20695>`_
+   - `https://review.openstack.org/#/c/20696 <https://review.openstack.org/#/c/20696>`_
+   - `https://review.openstack.org/#/c/20697 <https://review.openstack.org/#/c/20697>`_
+
+
+

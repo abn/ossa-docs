@@ -1,0 +1,43 @@
+=============
+OSSA-2012-015
+=============
+
+Some actions in Keystone admin API do not validate token
+--------------------------------------------------------
+:Date: September 28, 2012
+
+:Description:
+
+   Jaxon Xu reported a vulnerability in Keystone. Two admin API actions did
+   not require a valid token.  The first was listing roles for a user.  The
+   second as  the ability to get, create, and delete services.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg17034.html <https://lists.launchpad.net/openstack/msg17034.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Jason Xu from UNKNOWN
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1006815 <https://launchpad.net/bugs/1006815>`_
+   - `https://launchpad.net/bugs/1006822 <https://launchpad.net/bugs/1006822>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/8104 <https://review.openstack.org/#/c/8104>`_
+   - `https://review.openstack.org/#/c/9014 <https://review.openstack.org/#/c/9014>`_
+   - `https://review.openstack.org/#/c/8105 <https://review.openstack.org/#/c/8105>`_
+   - `https://review.openstack.org/#/c/9015 <https://review.openstack.org/#/c/9015>`_
+
+
+

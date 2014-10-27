@@ -1,0 +1,47 @@
+=============
+OSSA-2013-030
+=============
+
+XenAPI security groups not kept through migrate or resize
+---------------------------------------------------------
+:Date: November 14, 2013
+
+:Description:
+
+   Chris Behrens with Rackspace and Vangelis Tasoulas reported a set of
+   vulnerabilities in OpenStack Nova's XenAPI hypervisor backend. When
+   migrating or resizing an instance, including live migration, existing
+   security groups may not be reapplied after the operation completes. This
+   can lead to unintentional network exposure for virtual machines. Only
+   setups using the XenAPI backend are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-November/000161.html <http://lists.openstack.org/pipermail/openstack-announce/2013-November/000161.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits:
+
+   - Chris Behrens from Rackspace
+   - Vangelis Tasoulas from UNKNOWN
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1073306 <https://launchpad.net/bugs/1073306>`_
+   - `https://launchpad.net/bugs/1202266 <https://launchpad.net/bugs/1202266>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/52987 <https://review.openstack.org/#/c/52987>`_
+   - `https://review.openstack.org/#/c/52989 <https://review.openstack.org/#/c/52989>`_
+
+
+

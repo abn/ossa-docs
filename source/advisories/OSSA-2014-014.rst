@@ -1,0 +1,48 @@
+=============
+OSSA-2014-014
+=============
+
+Neutron security groups bypass through invalid CIDR
+---------------------------------------------------
+:Date: April 22, 2014
+
+:Description:
+
+   Stephen Ma from Hewlett Packard and Christoph Thiel from Deutsche
+   Telekom reported a vulnerability in Neutron security groups. By creating
+   a security group rule with an invalid CIDR, an authenticated user may
+   break openvswitch-agent process, preventing further rules from being
+   applied on the host. Note: removal of the faulty rule is not enough, the
+   openvswitch-agent must be restarted. All Neutron setups using Open
+   vSwitch are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-April/000227.html <http://lists.openstack.org/pipermail/openstack-announce/2014-April/000227.html>`_
+
+:Products affected: 
+   - neutron: TODO
+
+
+
+:Credits:
+
+   - Stephen Ma from HP
+   - Christoph Thiel from Deutsche Telekom
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1300785 <https://launchpad.net/bugs/1300785>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/59212 <https://review.openstack.org/#/c/59212>`_
+   - `https://review.openstack.org/#/c/88674 <https://review.openstack.org/#/c/88674>`_
+   - `https://review.openstack.org/#/c/88057 <https://review.openstack.org/#/c/88057>`_
+
+
+

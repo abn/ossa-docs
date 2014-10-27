@@ -1,0 +1,44 @@
+=============
+OSSA-2013-016
+=============
+
+Unchecked user input in Swift XML responses
+-------------------------------------------
+:Date: June 13, 2013
+
+:Description:
+
+   Alex Gaynor from Rackspace reported a vulnerability in XML handling
+   within Swift account servers. Account strings were unescaped in XML
+   listings, and an attacker could potentially generate unparsable or
+   arbitrary XML responses which may be used to leverage other
+   vulnerabilities in the calling software.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg24373.html <https://lists.launchpad.net/openstack/msg24373.html>`_
+
+:Products affected: 
+   - swift: TODO
+
+
+
+:Credits: - Alex Gaynor from Rackspace
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1183884 <https://launchpad.net/bugs/1183884>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/32905 <https://review.openstack.org/#/c/32905>`_
+   - `https://review.openstack.org/#/c/32909 <https://review.openstack.org/#/c/32909>`_
+   - `https://review.openstack.org/#/c/32911 <https://review.openstack.org/#/c/32911>`_
+   - `https://review.openstack.org/#/c/32982 <https://review.openstack.org/#/c/32982>`_
+
+
+

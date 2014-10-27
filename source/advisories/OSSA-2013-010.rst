@@ -1,0 +1,49 @@
+=============
+OSSA-2013-010
+=============
+
+Nova uses insecure keystone middleware tmpdir by default
+--------------------------------------------------------
+:Date: May 09, 2013
+
+:Description:
+
+   Grant Murphy from Red Hat and Anton Lundin both independently reported a
+   vulnerability in Nova's default location for the Keystone middleware
+   signing directory (signing_dir). By previously setting up a malicious
+   directory structure, an attacker with local shell access on the Nova
+   node could potentially issue forged tokens that would be accepted by the
+   middleware. Only setups that use the default value for signing_dir are
+   affected. Note that future versions of the Keystone middleware will
+   issue a warning if an insecure signing directory is used.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2013-May/000098.html <http://lists.openstack.org/pipermail/openstack-announce/2013-May/000098.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits:
+
+   - Grant Murphy from Red Hat
+   - Anton Lundin from UNKNOWN
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1174608 <https://launchpad.net/bugs/1174608>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/28568 <https://review.openstack.org/#/c/28568>`_
+   - `https://review.openstack.org/#/c/28569 <https://review.openstack.org/#/c/28569>`_
+   - `https://review.openstack.org/#/c/28570 <https://review.openstack.org/#/c/28570>`_
+
+
+

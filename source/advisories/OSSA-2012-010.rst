@@ -1,0 +1,50 @@
+=============
+OSSA-2012-010
+=============
+
+Various Keystone token expiration issues
+----------------------------------------
+:Date: July 27, 2012
+
+:Description:
+
+   Derek Higgins reported various issues affecting Keystone token
+   expiration. A token expiration date can be circumvented by continuously
+   creating new tokens before the old one has expired. Existing tokens also
+   remain valid after a user account is disabled or after an account
+   password changed. An authenticated and authorized user could potentially
+   leverage those vulnerabilities to extend his access beyond the account
+   owner expectations.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg15164.html <https://lists.launchpad.net/openstack/msg15164.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Derek Higgins from UNKNOWN
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/998185 <https://launchpad.net/bugs/998185>`_
+   - `https://launchpad.net/bugs/997194 <https://launchpad.net/bugs/997194>`_
+   - `https://launchpad.net/bugs/996595 <https://launchpad.net/bugs/996595>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/8174 <https://review.openstack.org/#/c/8174>`_
+   - `https://review.openstack.org/#/c/8573 <https://review.openstack.org/#/c/8573>`_
+   - `https://review.openstack.org/#/c/7344 <https://review.openstack.org/#/c/7344>`_
+   - `https://review.openstack.org/#/c/8456 <https://review.openstack.org/#/c/8456>`_
+   - `https://review.openstack.org/#/c/7276 <https://review.openstack.org/#/c/7276>`_
+   - `https://review.openstack.org/#/c/8454 <https://review.openstack.org/#/c/8454>`_
+
+
+

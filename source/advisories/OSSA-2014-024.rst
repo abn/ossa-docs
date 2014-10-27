@@ -1,0 +1,44 @@
+=============
+OSSA-2014-024
+=============
+
+Use of non-constant time comparison operation
+---------------------------------------------
+:Date: July 17, 2014
+
+:Description:
+
+   Alex Gaynor from Rackspace reported a timing attack vulnerability in
+   Nova.   By analyzing response times to requests for instance metadata,
+   an attacker  may be able to guess a valid instance ID signature. This
+   could allow access  to important configuration details of another
+   instance. Only setups  configured to proxy metadata requests via Neutron
+   are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-July/000253.html <http://lists.openstack.org/pipermail/openstack-announce/2014-July/000253.html>`_
+
+:Products affected: 
+   - nova: TODO
+
+
+
+:Credits: - Alex Gaynor from Rackspace
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1325128 <https://launchpad.net/bugs/1325128>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/107396 <https://review.openstack.org/#/c/107396>`_
+   - `https://review.openstack.org/#/c/107397 <https://review.openstack.org/#/c/107397>`_
+   - `https://review.openstack.org/#/c/107398 <https://review.openstack.org/#/c/107398>`_
+
+
+

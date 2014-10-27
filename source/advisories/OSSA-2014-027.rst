@@ -1,0 +1,50 @@
+=============
+OSSA-2014-027
+=============
+
+Persistent XSS in Horizon Host Aggregates interface
+---------------------------------------------------
+:Date: August 19, 2014
+
+:Description:
+
+   Dennis Felsch and Mario Heiderich from the Horst Görtz Institute for
+   IT-Security, Ruhr-University Bochum reported a persistent XSS in
+   Horizon. A malicious administrator may conduct a persistent XSS attack
+   by registering a malicious host aggregate in Horizon Host Aggregate
+   interface. Once executed in a legitimate context this attack may reveal
+   another admin token, potentially resulting in a lateral privilege
+   escalation. All Horizon setups are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-August/000266.html <http://lists.openstack.org/pipermail/openstack-announce/2014-August/000266.html>`_
+
+:Products affected:
+
+   
+   - horizon: up to 2013.2.3, and 2014.1 versions up to 2014.1.2
+
+
+
+:Credits:
+
+   - Dennis Felsch from Ruhr-University Bochum
+   - Mario Heiderich from Ruhr-University Bochum
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1349491 <https://launchpad.net/bugs/1349491>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/115310 <https://review.openstack.org/#/c/115310>`_
+   - `https://review.openstack.org/#/c/115311 <https://review.openstack.org/#/c/115311>`_
+   - `https://review.openstack.org/#/c/115313 <https://review.openstack.org/#/c/115313>`_
+
+
+

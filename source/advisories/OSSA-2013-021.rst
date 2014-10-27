@@ -1,0 +1,42 @@
+=============
+OSSA-2013-021
+=============
+
+Cinder LVM volume driver does not support secure deletion
+---------------------------------------------------------
+:Date: August 07, 2013
+
+:Description:
+
+   Rongze Zhu from UnitedStack reported a vulnerability in the Cinder LVM
+   volume driver. The contents of LVM snapshots may not be cleared upon
+   deletion even when secure deletes are configured, resulting in potential
+   exposure of latent data to subsequent servers for other tenants. Only
+   setups using LVMVolumeDriver are affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack/2013-August/000415.html <http://lists.openstack.org/pipermail/openstack/2013-August/000415.html>`_
+
+:Products affected: 
+   - cinder: TODO
+
+
+
+:Credits: - Rongze Zhu from UnitedStack
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1198185 <https://launchpad.net/bugs/1198185>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/36506 <https://review.openstack.org/#/c/36506>`_
+   - `https://review.openstack.org/#/c/39565 <https://review.openstack.org/#/c/39565>`_
+
+
+

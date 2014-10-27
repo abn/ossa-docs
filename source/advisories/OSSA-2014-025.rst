@@ -1,0 +1,43 @@
+=============
+OSSA-2014-025
+=============
+
+Denial of Service in Neutron allowed address pair
+-------------------------------------------------
+:Date: July 17, 2014
+
+:Description:
+
+   Liping Mao from Cisco reported a denial of service vulnerability in
+   Neutron's handling of allowed address pair. By creating a large number
+   of allowed address pairs, an authenticated user may overwhelm neutron
+   firewall rules and render compute nodes unusable. All Neutron setups are
+   affected.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-July/000255.html <http://lists.openstack.org/pipermail/openstack-announce/2014-July/000255.html>`_
+
+:Products affected: 
+   - neutron: TODO
+
+
+
+:Credits: - Liping Mao from Cisco
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1336207 <https://launchpad.net/bugs/1336207>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/107734 <https://review.openstack.org/#/c/107734>`_
+   - `https://review.openstack.org/#/c/107733 <https://review.openstack.org/#/c/107733>`_
+   - `https://review.openstack.org/#/c/107731 <https://review.openstack.org/#/c/107731>`_
+
+
+

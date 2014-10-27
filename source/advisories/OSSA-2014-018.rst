@@ -1,0 +1,45 @@
+=============
+OSSA-2014-018
+=============
+
+Keystone privilege escalation through trust chained delegation
+--------------------------------------------------------------
+:Date: June 12, 2014
+
+:Description:
+
+   Steven Hardy from Red Hat reported a vulnerability in Keystone chained
+   delegation. By creating a delegation from a trust or OAuth token, a
+   trustee may abuse the identity impersonation against keystone and
+   circumvent the enforced scope, resulting in potential elevated
+   privileges to any of the trustor's projects and or roles. All Keystone
+   deployments configured to enable trusts are affected, which has been the
+   default since Grizzly.
+
+:Announcement:
+
+   `http://lists.openstack.org/pipermail/openstack-announce/2014-June/000240.html <http://lists.openstack.org/pipermail/openstack-announce/2014-June/000240.html>`_
+
+:Products affected: 
+   - keystone: TODO
+
+
+
+:Credits: - Steven Hardy from Red Hat
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/1324592 <https://launchpad.net/bugs/1324592>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/99687 <https://review.openstack.org/#/c/99687>`_
+   - `https://review.openstack.org/#/c/99700 <https://review.openstack.org/#/c/99700>`_
+   - `https://review.openstack.org/#/c/99703 <https://review.openstack.org/#/c/99703>`_
+
+
+

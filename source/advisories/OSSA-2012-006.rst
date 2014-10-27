@@ -1,0 +1,41 @@
+=============
+OSSA-2012-006
+=============
+
+Horizon session fixation and reuse
+----------------------------------
+:Date: May 04, 2012
+
+:Description:
+
+   Thomas Biege from SUSE reported a vulnerability in OpenStack Dashboard
+   (Horizon). Under specific circumstances it is possible to reuse session
+   cookies from another user, potentially allowing access to unauthorized
+   information and capabilities.
+
+:Announcement:
+
+   `https://lists.launchpad.net/openstack/msg11263.html <https://lists.launchpad.net/openstack/msg11263.html>`_
+
+:Products affected: 
+   - horizon: TODO
+
+
+
+:Credits: - Thomas Biege from SUSE
+
+
+
+:Bug reports:
+
+   - `https://launchpad.net/bugs/978896 <https://launchpad.net/bugs/978896>`_
+
+
+
+:Reviews:
+
+   - `https://review.openstack.org/#/c/7144 <https://review.openstack.org/#/c/7144>`_
+   - `https://review.openstack.org/#/c/7145 <https://review.openstack.org/#/c/7145>`_
+
+
+
